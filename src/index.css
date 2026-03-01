@@ -5,7 +5,7 @@
 .tile-map {
   image-rendering: crisp-edges;
   z-index: 1;
-  position: absolute;
+  position: relative;
   pointer-events: none;
 }
 
@@ -20,7 +20,8 @@
 }
 
 .tile:hover {
-  background-color: goldenrod;
+  box-shadow: inset 0px 0px 5px royalblue;
+  z-index: 2;
 }
 
 .visual {

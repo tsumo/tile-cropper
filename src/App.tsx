@@ -22,7 +22,7 @@ const Map = ({
         const size = region.size || inheritedSize;
         return (
           <div className="region" key={i}>
-            {range(region.yCount).map((y) => {
+            {range(region.y).map((y) => {
               const top = (region.yOffset || 1) * size * y;
               return (
                 <div
@@ -32,7 +32,7 @@ const Map = ({
                   }}
                   key={y}
                 >
-                  {range(region.xCount).map((x) => {
+                  {range(region.x).map((x) => {
                     const left = (region.xOffset || 1) * size * x;
                     return (
                       <div
