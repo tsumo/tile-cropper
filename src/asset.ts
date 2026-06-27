@@ -13,10 +13,7 @@ type TileMap = {
   regions: Region[];
 };
 
-type TileGroup = Record<
-  string,
-  { size?: number; maps: Record<string, TileMap> }
->;
+type TileGroup = Record<string, { size?: number; maps: Record<string, TileMap> }>;
 
 type TileCollection = { size: number; groups: TileGroup };
 

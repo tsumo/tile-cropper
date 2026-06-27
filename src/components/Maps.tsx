@@ -28,11 +28,7 @@ function MapsComponent() {
                     return (
                       <div key={mapName} id={getId("map", mapName)}>
                         <h3>{mapName}</h3>
-                        <Map
-                          src={src}
-                          inheritedSize={size}
-                          regions={map.regions}
-                        />
+                        <Map src={src} inheritedSize={size} regions={map.regions} />
                       </div>
                     );
                   })}

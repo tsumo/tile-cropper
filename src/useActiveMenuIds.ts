@@ -25,9 +25,7 @@ export const useActiveMenuIds = (mapsRef: RefObject<HTMLDivElement | null>) => {
 
     for (const collectionName of objKeys(asset)) {
       for (const groupName of objKeys(asset[collectionName].groups)) {
-        for (const mapName of objKeys(
-          asset[collectionName].groups[groupName].maps,
-        )) {
+        for (const mapName of objKeys(asset[collectionName].groups[groupName].maps)) {
           const el = document.getElementById(getId("map", mapName));
           if (el) observer.observe(el);
         }

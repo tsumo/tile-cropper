@@ -11,26 +11,19 @@ export const Menu = ({ activeMenuIds }: { activeMenuIds: Set<string> }) => {
         const collection = asset[collectionName];
         const collectionId = getId("collection", collectionName);
         const collectionActive = objKeys(collection.groups).some((groupName) =>
-          objKeys(collection.groups[groupName].maps).some((mapName) =>
-            activeMenuIds.has(getId("map", mapName)),
-          ),
+          objKeys(collection.groups[groupName].maps).some((mapName) => activeMenuIds.has(getId("map", mapName))),
         );
 
         return (
           <Fragment key={collectionId}>
-            <p
-              onClick={() => scrollIntoView(collectionId)}
-              className={cl(s.item, collectionActive && s.active)}
-            >
+            <p onClick={() => scrollIntoView(collectionId)} className={cl(s.item, collectionActive && s.active)}>
               {collectionName}
             </p>
 
             {objKeys(collection.groups).map((groupName) => {
               const group = collection.groups[groupName];
               const groupId = getId("group", groupName);
-              const groupActive = objKeys(group.maps).some((mapName) =>
-                activeMenuIds.has(getId("map", mapName)),
-              );
+              const groupActive = objKeys(group.maps).some((mapName) => activeMenuIds.has(getId("map", mapName)));
 
               return (
                 <Fragment key={groupId}>
