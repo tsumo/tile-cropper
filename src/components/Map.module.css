@@ -16,9 +16,11 @@
 
 .regionRow {
   display: flex;
+  position: absolute;
 }
 
 .tile {
+  position: absolute;
   box-shadow: inset 0px 0px 1px #aaa;
   cursor: pointer;
   z-index: 2;

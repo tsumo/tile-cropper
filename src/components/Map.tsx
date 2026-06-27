@@ -24,7 +24,8 @@ export const Map = ({
         return (
           <div className={s.region} key={i}>
             {range(region.y).map((y) => {
-              const top = (region.yOffset || 1) * size * y;
+              const top =
+                ((region.yOffset ?? 0) + y) * size + (region.yOffsetPx ?? 0);
               return (
                 <div
                   className={s.regionRow}
@@ -32,11 +33,14 @@ export const Map = ({
                   key={y}
                 >
                   {range(region.x).map((x) => {
-                    const left = (region.xOffset || 1) * size * x;
+                    const left =
+                      ((region.xOffset ?? 0) + x) * size +
+                      (region.xOffsetPx ?? 0);
                     return (
                       <div
                         className={s.tile}
                         style={{
+                          left: left * factor,
                           width: size * factor,
                           height: size * factor,
                         }}

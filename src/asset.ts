@@ -2,6 +2,8 @@ export type Region = {
   size?: number;
   xOffset?: number;
   yOffset?: number;
+  xOffsetPx?: number;
+  yOffsetPx?: number;
   x: number;
   y: number;
 };
