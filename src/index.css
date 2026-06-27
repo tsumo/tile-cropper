@@ -1,29 +1,4 @@
-.map-container {
-  position: relative;
-}
-
-.tile-map {
-  image-rendering: crisp-edges;
-  z-index: 1;
-  position: relative;
-  pointer-events: none;
-}
-
-.region {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.region-row {
-  display: flex;
-}
-
-.tile:hover {
-  box-shadow: inset 0px 0px 5px royalblue;
-  z-index: 2;
-}
-
-.visual {
-  box-shadow: inset 0px 0px 1px #aaa;
+* {
+  margin: 0;
+  padding: 0;
 }

@@ -36,3 +36,10 @@ export const copyTile = (
   });
   document.body.removeChild(canvas);
 };
+
+export const getId = (type: "collection" | "group" | "map", name: string) =>
+  `${type}-${name}`;
+
+export const scrollIntoView = (id: string) => {
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+};

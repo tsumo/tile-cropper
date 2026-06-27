@@ -1,0 +1,35 @@
+.mapContainer {
+  position: relative;
+}
+
+.tileMap {
+  image-rendering: crisp-edges;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.region {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.regionRow {
+  display: flex;
+}
+
+.tile {
+  box-shadow: inset 0px 0px 1px #aaa;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.tile:hover {
+  box-shadow:
+    inset 0px 0px 10px white,
+    inset 0px 0px 10px black;
+}
+
+.tile:active {
+  background-color: #eeeeee77;
+}

@@ -1,0 +1,12 @@
+.app {
+  display: flex;
+  flex-direction: row;
+}
+
+.maps {
+  flex: 1;
+  height: 100vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 4px;
+}
