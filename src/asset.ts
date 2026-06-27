@@ -4,6 +4,7 @@ export type Region = {
   yOffset?: number;
   xOffsetPx?: number;
   yOffsetPx?: number;
+  debug?: boolean;
   x: number;
   y: number;
 };
