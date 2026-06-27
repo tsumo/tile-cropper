@@ -12,5 +12,10 @@
 }
 
 .item:hover {
+  background-color: steelblue;
+  color: white;
+}
+
+.active {
   background-color: lightsteelblue;
 }
