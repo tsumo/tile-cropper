@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { asset } from "../asset";
 import { getId, objKeys } from "../utils";
 import { Menu } from "./Menu";
-import { Map } from "./Map";
+import { Maps } from "./Maps";
 import s from "./App.module.css";
 
 const App = () => {
@@ -44,44 +44,8 @@ const App = () => {
   return (
     <div className={s.app}>
       <Menu activeMenuIds={activeMenuIds} />
-
       <div className={s.maps} ref={mapsRef}>
-        {objKeys(asset).map((collectionName) => {
-          const collection = asset[collectionName];
-
-          return (
-            <div key={collectionName} id={getId("collection", collectionName)}>
-              <h1>{collectionName}</h1>
-
-              {objKeys(collection.groups).map((groupName) => {
-                const group = collection.groups[groupName];
-
-                return (
-                  <div key={groupName} id={getId("group", groupName)}>
-                    <h2>{groupName}</h2>
-
-                    {objKeys(group.maps).map((mapName) => {
-                      const map = group.maps[mapName];
-                      const src = `${collectionName}/${groupName}/${mapName}`;
-                      const size = map.size || group.size || collection.size;
-
-                      return (
-                        <div key={mapName} id={getId("map", mapName)}>
-                          <h3>{mapName}</h3>
-                          <Map
-                            src={src}
-                            inheritedSize={size}
-                            regions={map.regions}
-                          />
-                        </div>
-                      );
-                    })}
-                  </div>
-                );
-              })}
-            </div>
-          );
-        })}
+        <Maps />
       </div>
     </div>
   );
