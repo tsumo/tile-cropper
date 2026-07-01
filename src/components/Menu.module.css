@@ -4,6 +4,7 @@
   overflow-x: hidden;
   padding: 4px 20px 4px 4px;
   box-sizing: border-box;
+  border-right: 1px solid #ccc;
 }
 
 .item {

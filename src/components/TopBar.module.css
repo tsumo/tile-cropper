@@ -1,0 +1,12 @@
+.topBar {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 100;
+  padding: 4px;
+  border-bottom: 1px solid #ccc;
+}
+
+.input {
+  width: 60px;
+}
